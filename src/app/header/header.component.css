@@ -1,0 +1,25 @@
+.navbar {
+    background-color: rgba(2, 2, 2, 0.555)
+}
+
+.logo {
+    color: white;
+}
+.logo img {
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    
+}
+.carousel {
+    position: absolute;
+    left: 300px;
+    right: 300px;
+    border: none !important;
+}
+
+.carousel img {
+    height: 300px;
+    z-index: 100;
+}

@@ -1,0 +1,26 @@
+
+#seats label {
+    cursor: pointer;
+    margin: 10px;
+}
+#seats label input[type="checkbox"] {
+    display: none;
+}
+#seats label span {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color: rgb(196, 193, 193);
+    border-radius: 5px;
+    border: 1px solid rgb(196, 193, 193);
+}
+#seats label input[type="checkbox"]:checked ~ span {
+    background: rgb(104, 177, 104) !important;
+    color: white;
+}
+/* .C, .cL {
+    display: inline-block;
+} */
+/* .B, .bL {
+    display: inline-block;
+} */

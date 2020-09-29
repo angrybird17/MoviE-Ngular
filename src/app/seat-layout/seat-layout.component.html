@@ -1,0 +1,26 @@
+<div id="seats">
+    <div class="A" id="A" *ngFor="let r of rows">
+        <label for="">{{ r }}</label>
+        <label *ngFor="let s of seats">
+            <input type="checkbox" name="" id="" value="{{ r }}{{ s }}" (click)="onClick()">
+            <span>{{ s }}</span>
+        </label>
+    </div>
+</div>
+
+<!-- 
+    <div class="B">
+        <label for="">B</label>
+        <label *ngFor="let s of seats">
+            <input type="checkbox" name="" id="" (click)="onClick()">
+            <span>{{ s }}</span>
+        </label>
+    </div>
+
+    <div class="C">
+        <label for="">A</label>
+        <label *ngFor="let s of seats">
+            <input type="checkbox" name="" id="" (click)="onClick()">
+            <span>{{ s }}</span>
+        </label>
+    </div> -->

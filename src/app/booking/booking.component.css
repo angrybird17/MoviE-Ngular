@@ -1,0 +1,162 @@
+#center {
+    background: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-atmospheric-black-gold-international-film-festival-background-film-festivalthe-film21st-image_73581.jpg);
+    color: white;
+}
+
+/* seats form */
+#seats #booking {
+    display: inline-block;
+}
+#seats {
+    width: 50%;
+    float: left;
+    border-right: 1px solid white;
+}
+#booking {
+    width: 50%;
+    float: right;
+}
+#seats, #booking {
+    position: relative;
+    top: 300px;
+}
+
+
+/* seat layout  */
+
+#seats label {
+    cursor: pointer;
+    margin: 10px;
+}
+#seats label input[type="checkbox"] {
+    display: none;
+}
+#seats label span, #label span {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+    color: rgb(196, 193, 193);
+    border-radius: 5px;
+    border: 1px solid rgb(196, 193, 193);
+}
+#seats label input[type="checkbox"]:checked ~ span {
+    background: rgb(158, 144, 64) !important;
+    color: black;
+}
+#seats label input[type="checkbox"]:disabled ~ span {
+    background: rgb(101, 102, 101) !important;
+    color: rgba(255, 255, 255, 0.527);
+}
+
+
+#label input[type="checkbox"]:disabled ~ span {
+    background: rgb(101, 102, 101) !important;
+    color: rgba(255, 255, 255, 0.527);
+}
+/* form */
+#cLabel, #pCount {
+    display: inline-block;
+}
+#uLabel, .username {
+    display: inline-block;
+}
+#sLabel, .seatLabel {
+    display: inline-block;
+}
+#mLabel {
+    padding-right: 40px; 
+}
+ #uLabel, #sLabel {
+    margin-right: 60px;
+}
+#cLabel {
+    margin-right: 45px;
+}
+#pCount, .username, .seatLabel  {
+    width: 100px;
+}
+#mName {
+    color: white;
+    margin: 0 0 0 20px;
+    border: none !important;
+    width: 300px !important;
+}
+#form .seatLabel {
+    padding: 0 10px;
+}
+/* #form input {
+    width: 170px;
+} */
+#form {
+    position: absolute;
+    right: 200px;
+}
+#form label {
+    color: white;
+}
+#form input {
+    border: none;
+    color: white !important;
+    width: 300px;
+    background: transparent;
+    border-bottom: 1px solid rgb(196, 193, 193);
+}
+.form input::placeholder {
+    color: white !important;
+}
+#form button {
+    color: rgba(255, 255, 255, 0.788);
+    padding: 0 30px;
+    margin-top: 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.788) !important;
+}
+
+#form .subBtn {
+    margin-right: 90px;
+}
+#form button:hover {
+    color: white;
+    background: transparent;
+    border: 1px solid white !important;
+}
+
+
+/* label */
+#label ul {
+    list-style: none;
+    position: absolute;
+    bottom: 180px;
+}
+#label input[type="checkbox"] {
+    display: none;
+}
+#label ul li span {
+    margin: 0 10px 0 10px;
+}
+.booked, .available, .selected {
+    display: inline-block;
+}
+#label ul .booked input[type="checkbox"]:disabled ~ span {
+    background: rgb(101, 102, 101) !important;
+    color: rgba(255, 255, 255, 0.527);
+    
+}
+#label ul .available input[type="checkbox"]:disabled ~ span {
+    background: black !important;
+    color: rgb(196, 193, 193);
+}
+#label ul .selected input[type="checkbox"]:disabled ~ span {
+    background: rgb(158, 144, 64) !important;
+    color: black;
+}
+
+/* validation */
+.alert {
+    padding: 10px 10px;
+    color: white;
+    background-color: rgb(179, 99, 99);
+}
+.fa-exclamation-circle {
+    padding-right: 10px;
+}

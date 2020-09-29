@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+/* #seats #booking {
+    display: inline-block;
+}
+#seats {
+    width: 50%;
+        float: left;
+}
+#booking {
+    width: 50%;
+        float: right;
+}
+#seats, #booking {
+    position: relative;
+    top: 300px;
+} */
+
+body {
+    background-color: black;
+}
