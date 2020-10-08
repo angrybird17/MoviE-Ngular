@@ -1,0 +1,16 @@
+{
+	"authenticationMethod": "route",
+	"routes": [
+		{
+			"source": "/api/.*",
+			"target": "$1",
+			"destination": "ngonscp-srv"
+		},
+		{
+			"source": "^(.*)$",
+			"target": "$1",
+			"service": "html5-apps-repo-rt"
+		}
+	],
+	"welcomeFile": "/index.html"
+}
