@@ -1,0 +1,17 @@
+{
+	"authenticationMethod": "route",
+	"routes": [
+		{
+			"source": "/api/(.*)",
+			"destination": "ngonscp-srv-binding",
+			"authenticationType": "none"
+		},
+		{
+			"source": "^(.*)",
+			"target": "app/$1",
+			"service": "html5-apps-repo-rt",
+			"authenticationType": "xsuaa"
+		}		
+	],
+	"welcomeFile": "/index.html"
+}
