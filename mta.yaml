@@ -1,6 +1,6 @@
 _schema-version: '3.1'
 ID: NgOnSCP
-version: 1.0.0
+version: 1.0.1
 description: 'A simple Angular MTA project'
 
 parameters:
@@ -18,7 +18,7 @@ parameters:
 modules:
   # --------------------- HTML5DEPLOYER MODULE -----------------
   - name: ngonscp-hmtl5-deployer
-    # ------------------------------------------------------------
+  # ------------------------------------------------------------
     type: com.sap.html5.application-content
     path: html5Deployer
     requires:
@@ -45,7 +45,7 @@ modules:
 
   # --------------------- APPROUTER MODULE ---------------------
   - name: ngonscp-approuter
-    # ------------------------------------------------------------
+  # ------------------------------------------------------------
     type: approuter.nodejs
     path: approuter
     parameters:
@@ -53,16 +53,18 @@ modules:
       memory: 256M
     requires:
       - name: ngonscp-html5-runtime
+      - name: ngonscp-xsuaa
       - name: ngonscp-srv-binding
         group: destinations
         properties:
-          name: ngonscp-srv
+          name: ngonscp-srv-binding
           url: ~{url}
           forwardAuthToken: true
+          strictSSL: false
 
   # --------------------- BACKEND API MODULE ---------------------
   - name: ngonscp-srv
-    # ------------------------------------------------------------
+  # ------------------------------------------------------------
     type: nodejs
     path: srv
     parameters:
@@ -76,7 +78,7 @@ modules:
 resources:
   # --------------------- HTML5 Runtime ----------------------
   - name: ngonscp-html5-runtime
-    # ------------------------------------------------------------
+  # ------------------------------------------------------------
     parameters:
       service-name: ngonscp-html5-runtime
       service-plan: app-runtime
@@ -85,7 +87,7 @@ resources:
 
   # --------------------- HTML5 Host -------------------------
   - name: ngonscp-html5-host
-    # ------------------------------------------------------------
+  # ------------------------------------------------------------
     parameters:
       service-name: ngonscp-html5-host
       service-plan: app-host
@@ -93,3 +95,13 @@ resources:
       config:
         sizeLimit: 2
     type: org.cloudfoundry.managed-service
+
+  # --------------------- XSUAA Service ---------------------
+  - name: ngonscp-xsuaa
+  # ------------------------------------------------------------
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service
+

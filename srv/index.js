@@ -10,7 +10,7 @@ const dbData = require('./data/dbData.json');
 //routes
 app.use('/tickets', require('./routes/tickets'));
 
-app.use(cors({ origin: 'http://localhost:4200' }));
+// app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 

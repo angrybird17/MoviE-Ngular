@@ -1,0 +1,25 @@
+{
+    "xsappname": "ngonscp",
+    "description": "xsuaa description",
+    "tenant-mode": "dedicated",
+    "scopes": [
+        {
+            "name": "uaa.user",
+            "description": "UAA"
+        },
+        {
+            "name": "$XSAPPNAME.display",
+            "description": "Display Only Scope"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "R_TEMPLATE_NGONSCP_DISPLAY",
+            "description": "Generic role template",
+            "scope-references": [
+                "uaa.user",
+                "$XSAPPNAME.display"
+            ]
+        }
+    ]
+}
